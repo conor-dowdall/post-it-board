@@ -1,6 +1,6 @@
 # Conor Dowdall | Web Dev
 
-## A Single Page Post-It Board by Conor Dowdall
+## A Single-Page Post-It Board by Conor Dowdall
 
 Find the site live on GitHub Pages:
 
