@@ -1,0 +1,149 @@
+.page-wrapper {
+  max-width: 80ch;
+  margin: 0 auto;
+}
+
+h1 > sup {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 0.5em;
+}
+.notice-board {
+  isolation: isolate;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  background-image: url("cork-board.webp");
+  border: 1em ridge rgb(163, 125, 19);
+  padding: 0.5em;
+  & > :nth-child(3n) {
+    flex: 10em;
+  }
+}
+
+.post-it {
+  font-family: "Rock Salt", cursive;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #e9e975;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 7em;
+  align-items: center;
+  justify-content: center;
+  padding-block: 1.5em;
+  font-size: 2em;
+
+  & > .emoji {
+    position: absolute;
+    top: 0.1em;
+    left: 0.3em;
+    transform-origin: bottom center;
+    transition: rotate, scale 150ms linear;
+  }
+
+  & > .text {
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    transition: opacity 100ms linear 300ms;
+    font-size: 0.7em;
+  }
+
+  & > .shadow {
+    position: absolute;
+    z-index: -1;
+    bottom: 20%;
+    right: 0.65em;
+    width: 60%;
+    height: 1em;
+    box-shadow: 0 0.5em 0.75em rgb(15, 11, 11);
+    transform-origin: bottom right;
+    transition: bottom 450ms ease-in;
+    rotate: 6deg;
+  }
+
+  &:hover {
+    & > .text {
+      opacity: 1;
+    }
+    & > .shadow {
+      bottom: 10%;
+    }
+  }
+}
+
+.p1 {
+  background-image: linear-gradient(175deg, rgb(0 0 0 / 0%) 95%, #a0d896bd 95%),
+    linear-gradient(85deg, rgb(0 0 0 / 0%) 95%, #a0d896bd 95%),
+    linear-gradient(175deg, rgb(0 0 0 / 0%) 90%, #c9c385c2 90%),
+    linear-gradient(85deg, rgb(0 0 0 / 0%) 92%, #c9c385c2 92%),
+    linear-gradient(175deg, rgb(0 0 0 / 0%) 85%, #c5a68e 85%),
+    linear-gradient(85deg, rgb(0 0 0 / 0%) 89%, #c5a68e 89%),
+    linear-gradient(175deg, rgb(0 0 0 / 0%) 80%, #d46b79da 80%),
+    linear-gradient(85deg, rgb(0 0 0 / 0%) 86%, #d46b79da 86%),
+    linear-gradient(175deg, rgb(0 0 0 / 0%) 75%, #9f8fa4 75%),
+    linear-gradient(85deg, rgb(0 0 0 / 0%) 83%, #9f8fa4 83%),
+    linear-gradient(175deg, rgb(0 0 0 / 0%) 70%, #98b9be9c 70%),
+    linear-gradient(85deg, rgb(0 0 0 / 0%) 80%, #98b9be9c 80%);
+}
+
+.p2 {
+  background-image: radial-gradient(
+    oklch(80.38% 0.054 7.55) 0%,
+    transparent 10%,
+    oklch(80.38% 0.054 157.55) 20%,
+    oklch(80.38% 0.054 207.55) 30%,
+    transparent 40%,
+    oklch(80.38% 0.054 307.55) 50%,
+    oklch(80.38% 0.054 357.55) 60%,
+    transparent 70%,
+    oklch(80.38% 0.054 457.55) 80%,
+    oklch(80.38% 0.054 507.55) 90%,
+    oklch(80.38% 0.054 557.55) 100%
+  );
+}
+
+.p3 {
+  background-image: radial-gradient(
+    circle at 0% 50%,
+    rgb(255, 151, 151) 5%,
+    yellow 15%,
+    lightblue 25%,
+    transparent 50%
+  );
+}
+
+.p4 {
+  background-image: linear-gradient(
+    190deg,
+    rgba(255, 109, 109, 0.5) 5%,
+    rgb(255 153 0 / 50%) 10%,
+    rgb(255 255 0 / 50%) 15%,
+    transparent 15%,
+    transparent 85%,
+    rgb(75 0 130 / 50%) 85%,
+    rgb(238 130 238 / 50%) 90%,
+    rgba(253, 125, 125, 0.5) 95%
+  );
+}
+
+.p5 {
+  background-image: repeating-linear-gradient(
+      190deg,
+      rgba(170, 252, 163, 0.5) 5%,
+      rgba(238, 247, 121, 0.5) 10%,
+      rgba(226, 226, 79, 0.5) 15%,
+      transparent 15%,
+      transparent 25%
+    ),
+    repeating-linear-gradient(
+      -190deg,
+      rgba(106, 133, 255, 0.5) 5%,
+      rgba(171, 252, 255, 0.5) 10%,
+      rgba(255, 171, 241, 0.5) 15%,
+      transparent 15%,
+      transparent 25%
+    );
+}
